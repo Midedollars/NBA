@@ -1,0 +1,20 @@
+{
+  "name": "NotaBene",
+  "version": "Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start" : "node ./src/app.js",
+    "dev" : "nodemon ./src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "repository": "https://github.com/Midedollars/Nota_Bene_App.git"
+}
