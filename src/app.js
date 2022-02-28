@@ -18,11 +18,11 @@ app.use(morgan("dev"));
 const noteRouter = require("./routes/note.route");
 
 // base endpoint
-app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "This is the version of Note API",
-  });
-});
+// app.get("/", (req, res) => {
+//   res.status(200).json({
+//     message: "This is the version of Note API",
+//   });
+// });
 
 // The base endpoint 
 app.use("/api/v1", noteRouter);
