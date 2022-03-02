@@ -12,9 +12,9 @@ const {
 // The router paths extracted from note controller as follows:
 // /newNote
 // /removeNote/: _id
-// /editNote/:_id
-// /viewNote
-// /getTitleNote/:title
+// /noteUpdate/:_id
+// /allNote
+// /allNote/:title
 router.post("/newNote", createNote);
 
 router.delete("/removeNote/:_id", deleteNote);

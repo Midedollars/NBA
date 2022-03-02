@@ -2,6 +2,7 @@ const Note = require("../models/note.model");
 const { successResMsg, errorResMsg } = require("../utils/response");
 const AppError = require("../utils/appError");
 
+// To create a new note using 'title' & 'description'
 const createNote = async (req, res, next) => {
   try {
     const { title, description} = req.body;
@@ -22,6 +23,7 @@ const createNote = async (req, res, next) => {
 };
 
 
+// To delete a note by id
 const deleteNote = async (req, res, next) => {
     try {
       const id = req.params;
@@ -38,6 +40,7 @@ const deleteNote = async (req, res, next) => {
     }
   };
 
+  // To edit note created
   const updateNote = async (req, res, next) => {
     try {
       const { _id } = req.params;
@@ -59,7 +62,7 @@ const deleteNote = async (req, res, next) => {
   };
   
 
-
+// To view all created notes
 const viewAllNotes = async (req, res, next) => {
   try {
     const allNote = await Note.find();
@@ -72,17 +75,12 @@ const viewAllNotes = async (req, res, next) => {
   }
 };
 
-
+// To search notes with note title
 const fetchTitleNote = async (req, res, next) => {
   try {
     const { title } = req.params;
 
     const findNoteTitle = await Note.find({ title: title });
-    // if (!findNoteTitle) {
-    //   return res.status(404).json({
-    //     message: "Note not Found! Fill in the required details",
-    //   });
-    // }
     return successResMsg(res, 200, {
       message: "All Note view successfully",
       allNote,
