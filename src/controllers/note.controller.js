@@ -26,7 +26,7 @@ const createNote = async (req, res, next) => {
 // To delete a note by id
 const deleteNote = async (req, res, next) => {
     try {
-      const id = req.params;
+      const id = req.headers;
       const removeNote = await Note.findOneAndDelete({ _id: id });
       if (!removeNote) {
         return next(new AppError("Note not found!, Please fill in the required field", 404));

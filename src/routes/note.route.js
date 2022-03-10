@@ -17,7 +17,7 @@ const {
 // /allNote/:title
 router.post("/newNote", createNote);
 
-router.delete("/removeNote/:_id", deleteNote);
+router.delete("/removeNote", deleteNote);
 
 router.patch("/noteUpdate/:_id", updateNote);
 
